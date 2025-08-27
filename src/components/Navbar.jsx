@@ -1,9 +1,37 @@
 import { useState } from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
+import { IoMdArrowDropdown } from "react-icons/io";
+import NavDropDown from "./NavDropDown";
+
+const navbar = [
+  {
+    title: "Join Us",
+    link: "joinUs",
+    icon: <IoMdArrowDropdown />,
+    dropdown: [
+      { title: "Register For Coding", link: "/" },
+      { title: "Register For Utme/Waec", link: "/" },
+    ],
+  },
+  {
+    title: "Login/Sign Up to Portal",
+    link: "home",
+    icon: <IoMdArrowDropdown />,
+  },
+  { title: "About Us", link: "about" },
+  { title: "Contact Us", link: "contact" },
+  { title: "Verify Certificate", link: "services" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  function handleClickOutside(event) {
+    console.log("Clicked outside:", event.target);
+    setDropdownOpen((prev) => !prev);
+  }
 
   return (
     <nav className="bg-black shadow-md fixed top-0 left-0 w-full">
@@ -11,23 +39,22 @@ export default function Navbar() {
         {/* Navbar Row */}
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-bold text-blue-600">SoundTech Logo</div>
-
           {/* Desktop Menu */}
-          <div className="text-white hidden md:flex space-x-7 font-bold">
-            <a href="#home" className="hover:text-blue-600">
-              Login/Sign Up to Portal
-            </a>
-            <a href="#about" className="hover:text-blue-600">
-              About Us
-            </a>
-            <a href="#contact" className="hover:text-blue-600">
-              Contact Us
-            </a>
-            <a href="#services" className="hover:text-blue-600">
-              Verify Certificate
-            </a>
-          </div>
-
+          <ul className="text-white hidden md:flex space-x-7">
+            {navbar.map((nav, index) => (
+              <li className="relative" key={index} onClick={handleClickOutside}>
+                <span
+                  // href={nav.link}
+                  className="hover:text-blue-600 flex items-center gap-2"
+                >
+                  {nav.title} {nav.icon}
+                </span>
+                {nav.dropdown && (
+                  <NavDropDown open={dropdownOpen} dropdown={nav.dropdown} />
+                )}
+              </li>
+            ))}
+          </ul>
           {/* Mobile Button */}
           <div className="md:hidden">
             <button
@@ -59,6 +86,9 @@ export default function Navbar() {
           </button>
         </div>
         <div className="grid px-4 py-6 space-y-4 ">
+          <a href="#joinUs" className="hover:text-blue-600">
+            Join Us
+          </a>
           <a href="#home" className="hover:text-blue-600">
             Login/Sign Up to Portal
           </a>
