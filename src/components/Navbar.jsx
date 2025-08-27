@@ -3,6 +3,7 @@ import { CiMenuKebab } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import NavDropDown from "./NavDropDown";
+import Logo from "./Logo";
 
 const navbar = [
   {
@@ -42,7 +43,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 ">
         {/* Navbar Row */}
         <div className="flex justify-between items-center h-16">
-          <div className="text-2xl font-bold text-blue-600">SoundTech Logo</div>
+          <Logo />
           {/* Desktop Menu */}
           <ul className="text-white hidden md:flex space-x-7">
             {navbar.map((nav, index) => (
@@ -94,11 +95,11 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center px-4 py-4 border-b">
-          <h2 className="font-bold text-blue-600">SoundTech Academy</h2>
+        <div className="flex justify-between items-center px-4 py-4 border-b bg-black">
+          <Logo />
           <button
             onClick={() => setIsOpen(false)}
-            className="text-2xl text-gray-700"
+            className="text-2xl text-white"
           >
             <IoMdClose />
           </button>
