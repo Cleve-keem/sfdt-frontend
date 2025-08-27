@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Logo({ className }) {
   return (
-    <div className={`h-15 ${className}`}>
+    <div className={`h-15 w-15 ${className}`}>
       <img
         src="/sfeaLogo.png"
         alt="SoundTech Academy"
