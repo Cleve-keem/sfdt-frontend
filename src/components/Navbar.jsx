@@ -20,8 +20,8 @@ const navbar = [
     link: "home",
     icon: <IoMdArrowDropdown />,
     dropdown: [
-      { title: "Register For Coding", link: "/" },
-      { title: "Register For Utme/Waec", link: "/" },
+      { title: "Student Login To Portal", link: "/" },
+      { title: "Register To Login To Portal", link: "/" },
     ],
   },
   { title: "About Us", link: "about" },
@@ -70,9 +70,9 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(true)}
-              className="text-2xl text-gray-700 focus:outline-none"
+              className="text-2xl text-white focus:outline-none"
             >
-              <CiMenuKebab />
+              <CiMenuKebab  />
             </button>
           </div>
         </div>

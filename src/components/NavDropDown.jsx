@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 export default function NavDropDown({ open, dropdown: NavDropDown }) {
   return (
     <ul
