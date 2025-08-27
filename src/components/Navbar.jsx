@@ -104,23 +104,44 @@ export default function Navbar() {
             <IoMdClose />
           </button>
         </div>
-        <div className="grid px-4 py-6 space-y-4 ">
-          <a href="#joinUs" className="hover:text-blue-600">
-            Join Us
-          </a>
-          <a href="#home" className="hover:text-blue-600">
-            Login/Sign Up to Portal
-          </a>
-          <a href="#about" className="hover:text-blue-600">
-            About Us
-          </a>
-          <a href="#contact" className="hover:text-blue-600">
-            Contact Us
-          </a>
-          <a href="#services" className="hover:text-blue-600">
-            Verify Certificate
-          </a>
-        </div>
+        <ul className="grid px-4 py-6 space-y-4 ">
+          {navbar.map((nav, index) => (
+            <li
+              className="relative "
+              key={index}
+              onClick={() => nav.dropdown && handleClickOutside(index)}
+            >
+              <div
+                // href={nav.link}
+                className="hover:text-blue-600 items-center gap-2 cursor-pointer"
+              >
+                <div className="flex items-center">
+                  <span>{nav.title}</span>
+                  <span
+                    className={`${
+                      dropdownOpen === index ? "rotate-180" : "rotate-0"
+                    } duration-400`}
+                  >
+                    {nav.icon}
+                  </span>
+                </div>
+                {nav.dropdown && (
+                  <div
+                    className={`${
+                      dropdownOpen === index ? "block" : "hidden"
+                    } transition-all duration-500`}
+                  >
+                    {nav.dropdown.map((nav, index) => (
+                      <li key={index} className="p-2">
+                        <span className="">{nav.title}</span>
+                      </li>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
