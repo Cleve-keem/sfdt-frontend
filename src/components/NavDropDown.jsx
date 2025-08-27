@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 
 export default function NavDropDown({ open, dropdown: NavDropDown }) {
-  console.log(open)
   return (
     <ul
       className={`dropdown ${

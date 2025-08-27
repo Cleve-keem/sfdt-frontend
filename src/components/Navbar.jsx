@@ -6,6 +6,7 @@ import NavDropDown from "./NavDropDown";
 
 const navbar = [
   {
+    id: 1,
     title: "Join Us",
     link: "joinUs",
     icon: <IoMdArrowDropdown />,
@@ -18,6 +19,10 @@ const navbar = [
     title: "Login/Sign Up to Portal",
     link: "home",
     icon: <IoMdArrowDropdown />,
+    dropdown: [
+      { title: "Register For Coding", link: "/" },
+      { title: "Register For Utme/Waec", link: "/" },
+    ],
   },
   { title: "About Us", link: "about" },
   { title: "Contact Us", link: "contact" },
@@ -26,11 +31,10 @@ const navbar = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
 
-  function handleClickOutside(event) {
-    console.log("Clicked outside:", event.target);
-    setDropdownOpen((prev) => !prev);
+  function handleClickOutside(id) {
+    setDropdownOpen((prev) => (prev === id ? null : id));
   }
 
   return (
@@ -42,7 +46,11 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="text-white hidden md:flex space-x-7">
             {navbar.map((nav, index) => (
-              <li className="relative" key={index} onClick={handleClickOutside}>
+              <li
+                className="relative"
+                key={index}
+                onClick={() => nav.dropdown && handleClickOutside(index)}
+              >
                 <span
                   // href={nav.link}
                   className="hover:text-blue-600 flex items-center gap-2"
@@ -50,7 +58,10 @@ export default function Navbar() {
                   {nav.title} {nav.icon}
                 </span>
                 {nav.dropdown && (
-                  <NavDropDown open={dropdownOpen} dropdown={nav.dropdown} />
+                  <NavDropDown
+                    open={dropdownOpen === index}
+                    dropdown={nav.dropdown}
+                  />
                 )}
               </li>
             ))}
