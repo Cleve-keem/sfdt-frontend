@@ -53,9 +53,16 @@ export default function Navbar() {
               >
                 <span
                   // href={nav.link}
-                  className="hover:text-blue-600 flex items-center gap-2"
+                  className="hover:text-blue-600 flex items-center gap-2 cursor-pointer"
                 >
-                  {nav.title} {nav.icon}
+                  {nav.title}
+                  <span
+                    className={`${
+                      dropdownOpen === index ? "rotate-180" : "rotate-0"
+                    } duration-400`}
+                  >
+                    {nav.icon}
+                  </span>
                 </span>
                 {nav.dropdown && (
                   <NavDropDown
@@ -72,7 +79,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(true)}
               className="text-2xl text-white focus:outline-none"
             >
-              <CiMenuKebab  />
+              <CiMenuKebab />
             </button>
           </div>
         </div>
