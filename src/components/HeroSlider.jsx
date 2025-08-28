@@ -18,14 +18,14 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <div className="mb-90 relative ">
+    <div className="mb-90 relative -z-10">
       <div className=" w-full h-screen overflow-hidden ">
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt=""
-            className={`absolute inset-0 w-full h-full py-[2rem] object-cover transition-opacity duration-1000 ease-in-out ${
+            className={`absolute z-20 inset-0 w-full h-full py-[2rem] object-cover transition-opacity duration-1000 ease-in-out ${
               index === current ? "opacity-100" : "opacity-0"
             }`}
           />
