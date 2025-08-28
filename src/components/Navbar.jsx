@@ -106,7 +106,7 @@ export default function Navbar() {
         </div>
         <ul className="grid px-4 py-6 space-y-4 ">
           {navbar.map((nav, index) => (
-            <li
+            <div
               className="relative "
               key={index}
               onClick={() => nav.dropdown && handleClickOutside(index)}
@@ -132,14 +132,14 @@ export default function Navbar() {
                     } transition-all duration-500`}
                   >
                     {nav.dropdown.map((nav, index) => (
-                      <li key={index} className="p-2">
+                      <div key={index} className="p-2">
                         <span className="">{nav.title}</span>
-                      </li>
+                      </div>
                     ))}
                   </div>
                 )}
               </div>
-            </li>
+            </div>
           ))}
         </ul>
       </div>
