@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const images = [
   "public/heroImage (1).jpg",
   "public/heroImage (2).jpg",
-  "public/heroImage (3).jpg",
+  "public/heroImage (3).jpeg",
   "public/heroImage (4).jpeg",
 ];
 
@@ -13,12 +13,12 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000); 
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="mb-90 relative ">
+    <div className="mb-90 relative mt-8">
       <div className=" w-full h-screen overflow-hidden ">
         {images.map((img, index) => (
           <img
