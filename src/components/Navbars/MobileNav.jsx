@@ -10,7 +10,7 @@ export default function MobileNav({
 }) {
   return (
     <div
-      className={`absolute bottom-0 top-0 left-0 w-69 bg-white shadow-md z-50 transform transition-transform duration-300 ease-in-out ${
+      className={`absolute bottom-0 top-0 left-0 w-69 bg-white shadow-md z-50 transform transition-transform duration-300 md:hidden ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -51,7 +51,7 @@ export default function MobileNav({
                   } transition-all duration-500`}
                 >
                   {nav.dropdown.map((nav, index) => (
-                    <div key={index} className="p-2">
+                    <div key={index} className="py-2 ">
                       <span className="">{nav.title}</span>
                     </div>
                   ))}
