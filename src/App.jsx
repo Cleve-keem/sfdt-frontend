@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <ProfileBar />
-      {/* <Navbar /> */}
+      <Navbar />
       <h1 className="font-semibold text-center text-4xl mt-24">
         Welcome to Sound Foundation Tech School
       </h1>

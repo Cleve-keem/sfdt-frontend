@@ -39,7 +39,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-black shadow-md fixed top-0 left-0 w-full">
+    <nav className="mt-14 bg-black fixed top-0 left-0 w-full">
       <div className="max-w-7xl mx-auto px-4 ">
         {/* Navbar Row */}
         <div className="flex justify-between items-center h-16">
