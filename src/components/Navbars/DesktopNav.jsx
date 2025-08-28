@@ -1,6 +1,11 @@
 import React from "react";
+import NavDropDown from "../NavDropDown";
 
-export default function DesktopNav() {
+export default function DesktopNav({
+  handleClickOutside,
+  navbar,
+  dropdownOpen,
+}) {
   return (
     <ul className="text-white hidden md:flex space-x-7">
       {navbar.map((nav, index) => (

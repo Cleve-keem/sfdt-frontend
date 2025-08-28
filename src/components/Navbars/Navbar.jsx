@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { CiMenuKebab } from "react-icons/ci";
-import { IoMdClose } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
-import NavDropDown from "../NavDropDown";
 import Logo from "../Logo";
 import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 
 const navbar = [
   {
@@ -46,10 +45,34 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Logo />
           {/* Desktop Menu */}
-          <DesktopNav />
+          <DesktopNav
+            navbar={navbar}
+            setIsOpen={setIsOpen}
+            handleClickOutside={handleClickOutside}
+            dropdownOpen={dropdownOpen}
+          />
           {/* Mobile Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-2xl text-white focus:outline-none"
+            >
+              <CiMenuKebab />
+            </button>
+          </div>
+          {/* Side Drawer Overlay */}
         </div>
       </div>
+      {isOpen && <div className="fixed" onClick={() => setIsOpen(false)}></div>}
+
+      {/* Mobile side menu */}
+      <MobileNav
+        navbar={navbar}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        handleClickOutside={handleClickOutside}
+        dropdownOpen={dropdownOpen}
+      />
     </nav>
   );
 }

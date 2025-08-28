@@ -1,17 +1,13 @@
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Navbar from "./components/Navbars/Navbar";
-import Navber from "./components/Navbars/Navbar";
-import NavDropDown from "./components/NavDropDown";
+import HeroSlider from "./components/HeroSlider";
 
 function App() {
   return (
-    <>
-      <Navber />
-      <h1 className="font-semibold text-center text-4xl mt-24">
-        Welcome to Sound Foundation Tech School
-      </h1>
-      <Footer />
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <HeroSlider />
+    </div>
   );
 }
 
