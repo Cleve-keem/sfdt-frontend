@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "public/shoes (1).jpg",
-  "public/shoes (3).jpg",
-  "public/shoes (4).jpg",
+  "public/heroImage (1).jpg",
+  "public/heroImage (2).jpg",
+  "public/heroImage (3).jpg",
+  "public/heroImage (4).jpeg",
 ];
 
 const HeroSlider = () => {
@@ -12,7 +13,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000); // every 3s
+    }, 3000); 
     return () => clearInterval(interval);
   }, []);
 
@@ -30,11 +31,13 @@ const HeroSlider = () => {
           />
         ))}
       </div>
-      <div className="absolute inset-0 text-[18px] flex flex-col gap-10 justify-center px-5 bg-black/40 text-white md:px-30">
+      <div className="absolute inset-0 text-[18px] flex flex-col gap-10 justify-center px-5 text-white md:px-30">
         <h1 className="text-4xl font-bold capitalize md:leading-15 md:text-5xl md:w-3xl">
           Empower your learning journey with sound foundation edTech academy!
         </h1>
-        <button className="bg-red-500 w-fit px-6 py-1.5 rounded-xl">Enroll</button>
+        <button className="bg-red-500 w-fit px-6 py-1.5 rounded-xl">
+          Enroll
+        </button>
       </div>
     </div>
   );
