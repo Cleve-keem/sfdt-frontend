@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "public/heroImage (1).jpg",
-  "public/heroImage (2).jpg",
-  "public/heroImage (3).jpg",
-  "public/heroImage (4).jpeg",
+  "/heroImage1.jpg",
+  "/heroImage2.jpg",
+  "/heroImage3.jpg",
+  "/heroImage4.jpeg",
 ];
 
 const HeroSlider = () => {
