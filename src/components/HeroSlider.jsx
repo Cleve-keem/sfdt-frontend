@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
+import { RiArrowRightFill } from "react-icons/ri";
 
 const images = [
   "public/heroImage (1).jpg",
   "public/heroImage (2).jpg",
   "public/heroImage (3).jpeg",
-  "public/heroImage (4).jpeg",
 ];
 
 const HeroSlider = () => {
@@ -35,7 +35,8 @@ const HeroSlider = () => {
         <h1 className="text-4xl font-bold capitalize md:leading-15 md:text-5xl md:w-3xl">
           Empower your learning journey with sound foundation edTech academy!
         </h1>
-        <button className="bg-red-500 w-fit px-6 py-1.5 rounded-xl">
+        <button className="flex items-center gap-3 bg-red-500 w-fit px-6 py-1.5 rounded-xl hover:bg-amber-50 hover:text-black ransition-all duration-1000 ease-in-out">
+            <RiArrowRightFill />
           Enroll
         </button>
       </div>
