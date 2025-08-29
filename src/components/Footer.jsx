@@ -23,7 +23,7 @@ export default function Footer() {
   ];
   const phone = "+234 8169194879, +234 9130198740";
   const email =
-    "soundfoundationtechacademy@gmail.com,   soundfoundationtechacademy@yahoo.com";
+    "soundfoundationtechacademy@gmail.com";
 
   const socials = [
     {
@@ -47,7 +47,7 @@ export default function Footer() {
 
   return (
     <footer className=" bg-red-600 text-white p-6 ">
-      <div className="md:justify-between w-full md:flex">
+      <div className=" max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
         <div className="mx-10">
           <ul>
             {contact.map((cont, index) => (
@@ -71,7 +71,7 @@ export default function Footer() {
             <h3 className="font-bold">{email}</h3>
           </div>
         </div>
-        <div className="bg-black rounded-2xl shadow-xl p-6 flex justify-center items-center flex-col gap-4">
+        <div className="bg-black rounded-2xl shadow-xl flex justify-center items-center flex-col gap-4">
           <span className="font-semibold">
             Follow Us On Our Social Media Handles
           </span>
