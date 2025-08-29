@@ -1,14 +1,17 @@
+import Navbar from "./components/Navbars/Navbar";
 import HeroSlider from "./components/HeroSlider";
-import Navbar from "./components/Navbar";
-import Navber from "./components/Navbar";
-import NavDropDown from "./components/NavDropDown";
+import CourseCards from "./components/CourseCards";
+import ProfileBar from "./components/ProfileBar";
+import WelcomeText from "./components/WelcomeText";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-    <Navber/>
-   
-   <HeroSlider/>
+      <ProfileBar />
+      <Navbar />
+      <HeroSlider />
+      <WelcomeText />
+      <CourseCards />
     </div>
   );
 }

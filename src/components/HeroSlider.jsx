@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { RiArrowRightFill } from "react-icons/ri";
 
 const images = [
-  "public/heroImage (1).jpg",
-  "public/heroImage (2).jpg",
-  "public/heroImage (3).jpeg",
+  "/heroImage1.jpg",
+  "/heroImage2.jpg",
+  "/heroImage3.jpg",
+  "/heroImage4.jpeg",
 ];
 
 const HeroSlider = () => {
@@ -18,16 +18,18 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <div className="mb-90 relative mt-8">
-      <div className=" w-full h-screen overflow-hidden ">
+    <div className="w-full h-screen overflow-hidden  relative left-0 right-0 ">
+      <div
+        className="flex inset-0 h-full transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt=""
-            className={`absolute inset-0 w-full h-full py-[2rem] object-cover transition-opacity duration-1000 ease-in-out ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
+            className={`w-full h-full object-cover bg-no-repeat flex-shrink-0 "
+            `}
           />
         ))}
       </div>
@@ -35,8 +37,7 @@ const HeroSlider = () => {
         <h1 className="text-4xl font-bold capitalize md:leading-15 md:text-5xl md:w-3xl">
           Empower your learning journey with sound foundation edTech academy!
         </h1>
-        <button className="flex items-center gap-3 bg-red-500 w-fit px-6 py-1.5 rounded-xl hover:bg-amber-50 hover:text-black ransition-all duration-1000 ease-in-out">
-            <RiArrowRightFill />
+        <button className="bg-red-500 w-fit px-6 py-1.5 rounded-xl">
           Enroll
         </button>
       </div>

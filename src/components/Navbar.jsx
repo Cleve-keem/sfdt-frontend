@@ -39,7 +39,8 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-black shadow-md fixed top-0 left-0 w-full z-50 ">
+
+    <nav className="mt-14 bg-black fixed top-0 left-0 w-full">
       <div className="max-w-7xl mx-auto px-4 ">
         {/* Navbar Row */}
         <div className="flex justify-between items-center h-16">
@@ -106,7 +107,7 @@ export default function Navbar() {
         </div>
         <ul className="grid px-4 py-6 space-y-4 ">
           {navbar.map((nav, index) => (
-            <div
+            <li
               className="relative "
               key={index}
               onClick={() => nav.dropdown && handleClickOutside(index)}
@@ -132,14 +133,14 @@ export default function Navbar() {
                     } transition-all duration-500`}
                   >
                     {nav.dropdown.map((nav, index) => (
-                      <div key={index} className="p-2">
+                      <li key={index} className="p-2">
                         <span className="">{nav.title}</span>
-                      </div>
+                      </li>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
+            </li>
           ))}
         </ul>
       </div>
