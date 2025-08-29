@@ -1,4 +1,3 @@
-// import Footer from "./components/Footer";
 import Navbar from "./components/Navbars/Navbar";
 import HeroSlider from "./components/HeroSlider";
 
