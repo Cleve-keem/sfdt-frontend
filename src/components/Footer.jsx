@@ -22,8 +22,7 @@ export default function Footer() {
     },
   ];
   const phone = "+234 8169194879, +234 9130198740";
-  const email =
-    "soundfoundationtechacademy@gmail.com";
+  const email = "soundfoundationtechacademy@gmail.com";
 
   const socials = [
     {
@@ -47,8 +46,8 @@ export default function Footer() {
 
   return (
     <footer className=" bg-red-600 text-white p-6 ">
-      <div className=" max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-        <div className="mx-10">
+      <div className="flex flex-col justify-between max-w-7xl mx-auto md:flex-row ">
+        <div className="p-4">
           <ul>
             {contact.map((cont, index) => (
               <li key={index} className="  gap-4 mb-4">
@@ -63,7 +62,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-2 mb-2">
             <IoMdCall />
-            <h3 className="font-bold">{phone}</h3>
+            <h3 className="font-bold text-xl">{phone}</h3>
           </div>
 
           <div className="flex items-center gap-2">
@@ -71,7 +70,7 @@ export default function Footer() {
             <h3 className="font-bold">{email}</h3>
           </div>
         </div>
-        <div className="bg-black rounded-2xl shadow-xl flex justify-center items-center flex-col gap-4">
+        <div className="bg-black rounded-2xl flex justify-center items-center h-[200px] mt-3 p-8 flex-col gap-4">
           <span className="font-semibold">
             Follow Us On Our Social Media Handles
           </span>
@@ -85,7 +84,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-red-600 transition-colors"
               >
-                {social.logo} 
+                {social.logo}
               </a>
             ))}
           </div>
@@ -93,7 +92,10 @@ export default function Footer() {
       </div>
 
       <div className="mt-10 text-center text-sm border-t border-white/30 pt-4">
-        © 2025 Sound Foundation EdTech Academy. All rights reserved.
+        <div className="flex flex-col">
+          © 2025 Sound Foundation EdTech Academy.
+          <span>All rights reserved.</span>
+        </div>
       </div>
     </footer>
   );
