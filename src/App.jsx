@@ -1,21 +1,18 @@
+import Navbar from "./components/Navbars/Navbar";
+import HeroSlider from "./components/HeroSlider";
 import CourseCards from "./components/CourseCards";
-import Navbar from "./components/Navbar";
-import Navber from "./components/Navbar";
-import NavDropDown from "./components/NavDropDown";
 import ProfileBar from "./components/ProfileBar";
 import WelcomeText from "./components/WelcomeText";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <ProfileBar />
       <Navbar />
-      <h1 className="font-semibold text-center text-4xl mt-24">
-        Welcome to Sound Foundation Tech School
-      </h1>
+      <HeroSlider />
       <WelcomeText />
       <CourseCards />
-    </>
+    </div>
   );
 }
 
