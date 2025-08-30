@@ -1,3 +1,4 @@
+import CourseCards from "./components/CourseCards";
 import Navbar from "./components/Navbar";
 import Navber from "./components/Navbar";
 import NavDropDown from "./components/NavDropDown";
@@ -13,6 +14,7 @@ function App() {
         Welcome to Sound Foundation Tech School
       </h1>
       <WelcomeText />
+      <CourseCards />
     </>
   );
 }
