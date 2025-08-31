@@ -21,7 +21,7 @@ export default function Footer() {
       address: "52, Eleshin Opposite Adide Store, Along ijede Road, Ikorodu",
     },
   ];
-  const phone = "+234 8169194879, +234 9130198740";
+  const phone = "08169194879, 09130198740";
   const email = "soundfoundationtechacademy@gmail.com";
 
   const socials = [
@@ -87,6 +87,7 @@ export default function Footer() {
                 {social.logo}
               </a>
             ))}
+
           </div>
         </div>
       </div>
