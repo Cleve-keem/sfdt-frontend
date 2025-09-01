@@ -5,6 +5,7 @@ import WelcomeText from "./components/WelcomeText";
 import CourseCards from "./components/CourseCards";
 import LearningPaths from "./components/LearningPaths";
 import Footer from "./components/Footer";
+import CourseText from "./components/CourseText";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <HeroSlider />
       <WelcomeText />
+      <CourseText />
       <CourseCards />
       <LearningPaths/>
       <Footer />
