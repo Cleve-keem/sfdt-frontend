@@ -21,53 +21,34 @@ function LearningPaths() {
   ];
 
   return (
-    // <div className="mb-90 flex flex-col gap-15 w-full px-8 md:px-32 ">
-    //   {card.map((cardInfo, index) => (
-    //     <div
-    //       key={index}
-    //       className="flex flex-col gap-4 py-3 px-2 rounded-2xl border-gradient text-white md:flex-row-reverse md:py-6 md:px-7 md:gap-6"
-    //     >
-    //       <img
-    //         src={cardInfo.image}
-    //         alt="learningpath"
-    //         className="w-full  md:w-[250px] md:h-auto object-contain"
-    //       />
-    //       <div className="flex flex-col gap-4 md:justify-center md:gap-8">
-    //         <h1 className="text-[22px] font-bold"> {cardInfo.header}</h1>
-    //         <p className="text-[16px] ">{cardInfo.desc}</p>
-    //         <button className="bg-red-500 text-white px-4 py-1 rounded-xl w-fit md:mx-auto md:mt-6">
-    //           {cardInfo.button}
-    //         </button>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>
-
-    <div className="mb-90 flex flex-col gap-15 w-full px-8 md:px-32 ">
-  {card.map((cardInfo, index) => (
-    <div
-      key={index}
-      className={`flex flex-col gap-4 py-3 px-2 rounded-2xl border-gradient text-white 
-        ${index === 0 ? "md:flex-row-reverse" : "md:flex-row"} md:py-6 md:px-7 md:gap-6`}
-    >
-      <img
-        src={cardInfo.image}
-        alt="learningpath"
-        className={`w-full object-contain 
+    <div className="flex flex-col gap-15 w-full py-4 px-8 md:px-32 ">
+      {card.map((cardInfo, index) => (
+        <div
+          key={index}
+          className={`flex flex-col gap-4 py-3 px-2 rounded-2xl border-gradient text-white 
+        ${
+          index === 0 ? "md:flex-row-reverse" : "md:flex-row"
+        } md:py-6 md:px-7 md:gap-6`}
+        >
+          <img
+            src={cardInfo.image}
+            alt="learningpath"
+            className={`w-full object-contain 
           ${index === 2 ? "md:w-[400px]" : "md:w-[250px]"} md:h-auto`}
-      />
+          />
 
-      <div className="flex flex-col gap-4 md:justify-center md:gap-8">
-        <h1 className="text-[22px] font-bold md:text-[26px]">{cardInfo.header}</h1>
-        <p className="text-[16px] md:text-[18px]">{cardInfo.desc}</p>
-        <button className="bg-red-500 text-white px-4 py-1 rounded-xl w-fit md:mx-auto md:mt-6">
-          {cardInfo.button}
-        </button>
-      </div>
+          <div className="flex flex-col gap-4 md:justify-center md:gap-8">
+            <h1 className="text-[22px] font-bold md:text-[26px]">
+              {cardInfo.header}
+            </h1>
+            <p className="text-[16px] md:text-[18px]">{cardInfo.desc}</p>
+            <button className="bg-red-500 text-white px-4 py-1 rounded-xl w-fit md:mx-auto md:mt-6">
+              {cardInfo.button}
+            </button>
+          </div>
+        </div>
+      ))}
     </div>
-  ))}
-</div>
-
   );
 }
 export default LearningPaths;
