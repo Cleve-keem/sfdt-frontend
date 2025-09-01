@@ -48,13 +48,13 @@ function LearningPaths() {
     <div
       key={index}
       className={`flex flex-col gap-4 py-3 px-2 rounded-2xl border-gradient text-white 
-        ${index === 0 ? "md:flex-row" : "md:flex-row"} md:py-6 md:px-7 md:gap-6`}
+        ${index === 0 ? "md:flex-row-reverse" : "md:flex-row"} md:py-6 md:px-7 md:gap-6`}
     >
       <img
         src={cardInfo.image}
         alt="learningpath"
         className={`w-full object-contain 
-          ${index === 2 ? "md:w-[700px]" : "md:w-[450px]"} md:h-auto`}
+          ${index === 2 ? "md:w-[400px]" : "md:w-[250px]"} md:h-auto`}
       />
 
       <div className="flex flex-col gap-4 md:justify-center md:gap-8">
