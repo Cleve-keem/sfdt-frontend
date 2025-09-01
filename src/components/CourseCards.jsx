@@ -124,6 +124,16 @@ export default function CourseCards() {
 
   return (
     <section className="bg-black py-10 px-10">
+      <div className="text-center md:px-18 mb-10 md:text-left">
+        <h1 className=" font-bold text-white mb-2 md:text-[22px]">
+          What To Learn Next
+        </h1>
+        <p className="text-white max-w-2xl mb-10 md:text-[15px]">
+          When seleting IT course, consider your current skills, career
+          aspiration, and the demand for specific skills in the job market.
+        </p>
+      </div>
+
       <div className="max-w-[1200px] bg-[#f911302b] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5">
         {cardData.map((card, index) => (
           <div
