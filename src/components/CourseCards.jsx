@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function CourseCards() {
   const cardData = [
     {
@@ -10,7 +12,7 @@ export default function CourseCards() {
       imgSrc: "/UIUX.png",
       title: "UIUX Design",
       description:
-        "Duration: 3 months. You’ll Learn: UI design principles, UX research & wireframing, Prototyping tools (e.g., Figma), User testing, Design systems & accessibility.",
+        "Duration: 3 months. You'll Learn: UI design principles, UX research & wireframing, Prototyping tools (e.g., Figma), User testing, Design systems & accessibility.",
     },
     {
       imgSrc: "/Frontend-UX.png",
@@ -123,31 +125,22 @@ export default function CourseCards() {
   ];
 
   return (
-    <section className="bg-black py-10 px-10">
-      <div className="text-center md:px-18 mb-10 md:text-left">
-        <h1 className=" font-bold text-white mb-2 md:text-[22px]">
-          What To Learn Next
-        </h1>
-        <p className="text-white max-w-2xl mb-10 md:text-[15px]">
-          When seleting IT course, consider your current skills, career
-          aspiration, and the demand for specific skills in the job market.
-        </p>
-      </div>
-
-      <div className="max-w-[1200px] bg-[#f911302b] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5">
+    
+    <section className="bg-black py-5 px-3">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5 ">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-[#f911308b] shadow-2xl hover:scale-105 duration-300 rounded-lg overflow-hidden"
+            className="bg-[#191919] shadow-2xl hover:scale-105 duration-300 rounded-lg overflow-hidden border-1  "
           >
-            <div>
+            <div className="">
               <img
                 src={card.imgSrc}
                 alt={card.title}
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="text-white p-4 text-[15px] flex flex-col gap-1 items-center">
+            <div className="text-white p-4  flex flex-col gap-1 items-center">
               <h2 className="font-semibold text-center">{card.title}</h2>
               <p className="text-[14px] font-light text-center">
                 {card.description}
