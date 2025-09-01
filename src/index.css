@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .border-gradient {
+    border: 3px solid transparent;
+    background: linear-gradient(to right,#222020, #414041 ) padding-box,
+                linear-gradient(to right, #f00, #ff0, #0f0) border-box;
+  }
+}
