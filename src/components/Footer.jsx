@@ -14,7 +14,7 @@ export default function Footer() {
     },
     {
       title: "Waec & Jamb Center",
-      address: "Plot 64B Cele, Mowokeker, Elepe, Ikorodu.",
+      address: "Plot 64B Cele, Mowokeke, Elepe, Ikorodu.",
     },
     {
       title: "Coding Center",
@@ -45,17 +45,19 @@ export default function Footer() {
   ];
 
   return (
-    <footer className=" bg-red-600 text-white p-6 ">
-      <div className="flex flex-col justify-between max-w-7xl mx-auto md:flex-row ">
-        <div className="p-4">
+    <footer className="flex flex-col justify-center bg-black text-white p-6 ">
+      <div className="flex flex-col gap-10 items-center max-w-7xl md:min-w-[70%] justify-between mx-auto md:flex-row ">
+        <div className="px-4">
           <ul>
             {contact.map((cont, index) => (
-              <li key={index} className="  gap-4 mb-4">
-                <span className="flex items-center gap-2">
-                  <TiContacts />
+              <li key={index} className="gap-4 mb-4">
+                <div className="flex items-center gap-2">
+                  <span className="md:text-2xl">
+                    <TiContacts />
+                  </span>
                   <h3 className="font-bold">{cont.title}</h3>
-                </span>
-                <p className="text-sm">{cont.address}</p>
+                </div>
+                <p className="text-[12px] md:text-x">{cont.address}</p>
               </li>
             ))}
           </ul>
@@ -67,15 +69,15 @@ export default function Footer() {
 
           <div className="flex items-center gap-2">
             <BiLogoGmail />
-            <h3 className="font-bold">{email}</h3>
+            <h3 className="text-[12px] md:text-x">{email}</h3>
           </div>
         </div>
-        <div className="bg-black rounded-2xl flex justify-center items-center h-[200px] mt-3 p-8 flex-col gap-4">
+        <div className="bg-white text-black rounded-2xl flex justify-center items-center h-[200px] mt-3 p-5 flex-col gap-4">
           <span className="font-semibold">
             Follow Us On Our Social Media Handles
           </span>
           <h3 className="text-sm">Sound Foundation EdTech Academy</h3>
-          <div className="flex gap-6 text-xl cursor-pointer">
+          <div className="flex gap-6 text-3xl cursor-pointer">
             {socials.map((social, index) => (
               <a
                 key={index}
@@ -87,7 +89,6 @@ export default function Footer() {
                 {social.logo}
               </a>
             ))}
-
           </div>
         </div>
       </div>
