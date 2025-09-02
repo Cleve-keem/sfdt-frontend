@@ -125,14 +125,14 @@ export default function CourseCards() {
   ];
 
   return (
-    <section className="bg-black py-10 px-3">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5">
+    <section className="bg-black py-5 px-3">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5 ">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-[#191919] shadow-2xl hover:scale-105 duration-300 rounded-lg overflow-hidden"
+            className="bg-[#191919] shadow-2xl hover:scale-105 duration-300 rounded-lg overflow-hidden border-1  "
           >
-            <div>
+            <div className="">
               <img
                 src={card.imgSrc}
                 alt={card.title}

@@ -3,6 +3,7 @@ import HeroSlider from "./components/HeroSlider";
 import CourseCards from "./components/CourseCards";
 import ProfileBar from "./components/ProfileBar";
 import WelcomeText from "./components/WelcomeText";
+import CourseText from "./components/CourseText";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <HeroSlider />
       <WelcomeText />
+      <CourseText />
       <CourseCards />
     </div>
   );
