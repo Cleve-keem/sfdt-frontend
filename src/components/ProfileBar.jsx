@@ -1,6 +1,3 @@
-import React from "react";
-import { SlLike } from "react-icons/sl";
-import { IoCartOutline } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa";
 
 export default function ProfileBar() {
@@ -11,8 +8,6 @@ export default function ProfileBar() {
           teach on sound foundation edtech academy{" "}
         </p>
         <div className="flex items-center gap-3">
-          <SlLike />
-          <IoCartOutline />
           <FaRegBell />
 
           <img src="/profile.png" alt="" className="w-8 h-8 rounded-full" />
