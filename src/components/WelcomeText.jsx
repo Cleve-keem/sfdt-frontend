@@ -2,8 +2,8 @@ import React from "react";
 
 export default function WelcomeText() {
   return (
-    <section className="mt-20 bg-black text-white flex justify-center">
-      <div className="flex flex-col gap-7 text-center w-full px-10 md:w-[800px] py-12">
+    <section className="bg-black text-white flex justify-center">
+      <div className="flex flex-col gap-7 text-center w-full px-4 md:w-[800px] py-12">
         <h1 className="text-[28px] md:text-[32px] font-bold">
           Welcome to Sound Foundation EdTech Academy!
         </h1>
