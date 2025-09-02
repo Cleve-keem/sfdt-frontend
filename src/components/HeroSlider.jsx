@@ -7,7 +7,7 @@ const images = [
   "/heroImage4.jpeg",
 ];
 
-const HeroSlider = () => {
+const HeroSlider = () => {  
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
