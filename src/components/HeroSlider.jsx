@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Button from "./Button";
 
 const images = [
   "/heroImage1.jpg",
@@ -37,9 +38,7 @@ const HeroSlider = () => {
         <h1 className="text-4xl font-bold capitalize md:leading-15 md:text-5xl md:w-3xl">
           Empower your learning journey with sound foundation edTech academy!
         </h1>
-        <button className="bg-red-500 w-fit px-6 py-1.5 rounded-xl cursor-pointer">  
-          Enroll
-        </button>
+       <Button/>
       </div>
     </div>
   );
