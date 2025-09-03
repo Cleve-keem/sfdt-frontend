@@ -4,7 +4,7 @@ const images = [
   "/heroImage1.jpg",
   "/heroImage2.jpg",
   "/heroImage3.jpg",
-  "/heroImage4.jpeg",
+  "/heroImage4.png",
 ];
 
 const HeroSlider = () => {  
@@ -28,7 +28,7 @@ const HeroSlider = () => {
             key={index}
             src={img}
             alt=""
-            className={`w-full h-full object-cover bg-no-repeat flex-shrink-0 "
+            className={`w-full h-full object-cover bg-no-repeat flex-shrink-0 bg-black/50 opacity-50"
             `}
           />
         ))}
