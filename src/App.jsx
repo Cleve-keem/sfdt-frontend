@@ -11,7 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
-    <div>
+    <>
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
@@ -26,7 +26,7 @@ function App() {
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
