@@ -24,7 +24,7 @@ function App() {
           <Route path="/auth/Signin" element={<SigninPage />} />
         </Route>
 
-        <Route path="*" element={<NotFoundPage/>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
