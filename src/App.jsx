@@ -16,7 +16,7 @@ function App() {
       <WelcomeText />
       <CourseText />
       <CourseCards />
-      <LearningPaths/>
+      <LearningPaths />
       <Footer />
     </div>
   );
