@@ -1,24 +1,30 @@
-import Navbar from "./components/Navbars/Navbar";
-import HeroSlider from "./components/HeroSlider";
-import ProfileBar from "./components/ProfileBar";
-import WelcomeText from "./components/WelcomeText";
-import CourseCards from "./components/CourseCards";
-import LearningPaths from "./components/LearningPaths";
-import Footer from "./components/Footer";
-import CourseText from "./components/CourseText";
+import { Route, Routes } from "react-router";
+import HomePage from "./pages/public/HomePage";
+import PublicLayout from "./pages/public/Layout";
+import AuthLayout from "./pages/auth/Layout";
+import LoginPage from "./pages/auth/LoginPage";
+import SigninPage from "./pages/auth/SigninPage";
+import AboutPage from "./pages/public/AboutPage";
+import CodingApplication from "./pages/public/CodingApplication";
+import WaecApplication from "./pages/public/WaecApplication";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <ProfileBar />
-      <Navbar />
-      <HeroSlider />
-      <WelcomeText />
-      <CourseText />
-      <CourseCards />
-      <LearningPaths />
-      <Footer />
-    </div>
+      <Routes>
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/application/coding" element={<CodingApplication />} />
+          <Route path="/application/waec" element={<WaecApplication />} />
+        </Route>
+        <Route path="/auth" element={<AuthLayout />}>
+          <Route path="/auth/login" element={<LoginPage />} />
+          <Route path="/auth/Signin" element={<SigninPage />} />
+        </Route>
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
   );
 }
 
