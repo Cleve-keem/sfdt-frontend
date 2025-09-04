@@ -1,3 +1,4 @@
+import ContactUs from "../../components/ContactUs";
 import CourseCards from "../../components/CourseCards";
 import CourseText from "../../components/CourseText";
 import HeroSlider from "../../components/HeroSlider";
@@ -8,6 +9,7 @@ const HomePage = () => {
   return (
     <>
       <HeroSlider />
+      <ContactUs />
       <WelcomeText />
       <CourseText />
       <CourseCards />
