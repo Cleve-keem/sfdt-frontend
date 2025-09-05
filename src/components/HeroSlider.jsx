@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
+import Button from "./Button";
 
 const images = [
   "/heroImage1.jpg",
   "/heroImage2.jpg",
   "/heroImage3.jpg",
-  "/heroImage4.jpeg",
+  "/heroImage4.png",
 ];
 
-const HeroSlider = () => {
+const HeroSlider = () => {  
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const HeroSlider = () => {
             key={index}
             src={img}
             alt=""
-            className={`w-full h-full object-cover bg-no-repeat flex-shrink-0 "
+            className={`w-full h-full object-cover bg-no-repeat flex-shrink-0 bg-black/50 opacity-50"
             `}
           />
         ))}
@@ -37,9 +38,7 @@ const HeroSlider = () => {
         <h1 className="text-4xl font-bold capitalize md:leading-15 md:text-5xl md:w-3xl">
           Empower your learning journey with sound foundation edTech academy!
         </h1>
-        <button className="bg-red-500 w-fit px-6 py-1.5 rounded-xl">  
-          Enroll
-        </button>
+       <Button/>
       </div>
     </div>
   );
