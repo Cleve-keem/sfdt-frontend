@@ -8,9 +8,11 @@ import AboutPage from "./pages/public/AboutPage";
 import CodingApplication from "./pages/public/CodingApplication";
 import WaecApplication from "./pages/public/WaecApplication";
 import NotFoundPage from "./pages/NotFoundPage";
+import AppLayout from "./components/AppLayout";
 
 function App() {
   return (
+    <AppLayout>
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
@@ -25,6 +27,7 @@ function App() {
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+    </AppLayout>
   );
 }
 
