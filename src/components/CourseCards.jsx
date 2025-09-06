@@ -125,8 +125,8 @@ export default function CourseCards() {
   ];
 
   return (
-    <section className="bg-black py-5 px-3">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5 ">
+    <section className=" py-5 px-3">
+      <div className="max-w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-7 gap-5 ">
         {cardData.map((card, index) => (
           <div
             key={index}
