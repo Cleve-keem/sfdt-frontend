@@ -130,7 +130,7 @@ export default function CourseCards() {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-[#191919] shadow-2xl hover:scale-105 duration-300 rounded-lg overflow-hidden border-1  "
+            className="bg-[#191919] shadow-2xl hover:scale-105 duration-300 rounded-lg overflow-hidden  "
           >
             <div className="">
               <img
