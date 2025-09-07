@@ -1,7 +1,36 @@
 import { FaGraduationCap } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
+import { useForm } from "react-hook-form";
+
+// ✅ Reusable Input Component
+function InputField({ label, name, type = "text", register, errors }) {
+  return (
+    <div>
+      <input
+        type={type}
+        placeholder={label}
+        {...register(name, { required: `${label} is required` })}
+        className="w-full p-3 rounded-xl bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-indigo-500"
+      />
+      {errors[name] && (
+        <p className="text-red-500 text-sm mt-1">{errors[name]?.message}</p>
+      )}
+    </div>
+  );
+}
 
 export default function SigninPage() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  // ✅ Form Submit Handler
+  const onSubmit = (data) => {
+    console.log("Form Data:", data);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-800 text-white flex items-center justify-center px-6 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full">
@@ -24,27 +53,36 @@ export default function SigninPage() {
             <MdLocalPhone /> Contact Us — Get In Touch
           </p>
 
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Username"
-              className="w-full p-3 rounded-xl bg-gray-700 border border-gray-600 "
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <InputField
+              label="Username"
+              name="username"
+              register={register}
+              errors={errors}
             />
-            <input
+            <InputField
+              label="Email"
+              name="email"
               type="email"
-              placeholder="Email"
-              className="w-full p-3 rounded-xl bg-gray-700 border border-gray-600 "
+              register={register}
+              errors={errors}
             />
-            <input
+            <InputField
+              label="Password"
+              name="password"
               type="password"
-              placeholder="Password"
-              className="w-full p-3 rounded-xl bg-gray-700 border border-gray-600  "
+              register={register}
+              errors={errors}
             />
-            <input
+            <InputField
+              label="Repeat Password"
+              name="confirmPassword"
               type="password"
-              placeholder="Repeat Password"
-              className="w-full p-3 rounded-xl bg-gray-700 border border-gray-600 "
+              register={register}
+              errors={errors}
             />
+
+           
           </form>
         </div>
 
