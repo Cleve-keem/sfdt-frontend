@@ -1,4 +1,3 @@
-
 import { FaGraduationCap } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
 import { useForm } from "react-hook-form";
@@ -92,6 +91,7 @@ export default function SigninPage() {
         </div>
 
         {/* RIGHT SIDE */}
+
         <div className="flex flex-col gap-5">
           <h1 className="text-3xl font-bold mb-4">
             Register With Us Today We Are Dedicated To Providing High-Quality
@@ -104,6 +104,35 @@ export default function SigninPage() {
           </p>
 
           <div className="space-y-4">
+            <div>
+              <label className="block font-semibold mb-2">Gender</label>
+              <div className="flex gap-4 accent-red-500">
+                <label>
+                  <input
+                    type="radio"
+                    value="Male"
+                    {...register("gender", { required: "Gender is required" })}
+                  />
+                  Male
+                </label>
+                <label>
+                  <input type="radio" value="Female" {...register("gender")} />{" "}
+                  Female
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="Prefer Not To Say"
+                    {...register("gender")}
+                  />{" "}
+                  Prefer Not To Say
+                </label>
+              </div>
+              {errors.gender && (
+                <p className="text-red-500 text-sm">{errors.gender.message}</p>
+              )}
+            </div>
+
             <InputField
               label="Date Of Birth"
               name="dob"
@@ -136,44 +165,20 @@ export default function SigninPage() {
             />
 
             {/* .... Gender ....  */}
-            <div>
-              <label className="block font-semibold mb-2">Gender</label>
-              <div className="flex gap-4 accent-red-500">
-                <label>
-                  <input
-                    type="radio"
-                    value="Male"
-                    {...register("gender", { required: "Gender is required" })}
-                  />
-                  Male
-                </label>
-                <label>
-                  <input type="radio" value="Female" {...register("gender")} />{" "}
-                  Female
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="Prefer Not To Say"
-                    {...register("gender")}
-                  />{" "}
-                  Prefer Not To Say
-                </label>
-              </div>
-              {errors.gender && (
-                <p className="text-red-500 text-sm">{errors.gender.message}</p>
-              )}
-            </div>
 
             {/* .....Remember Me......  */}
             <div className="flex gap-10">
               <div className="flex items-center gap-2">
-              <input type="checkbox" {...register("remember")} className="accent-red-500"/>
-              <span>Remember Me</span>
-            </div>
+                <input
+                  type="checkbox"
+                  {...register("remember")}
+                  className="accent-red-500"
+                />
+                <span>Remember Me</span>
+              </div>
 
-            {/* .... Submit ..... */}
-            <Button text="Submit"/>
+              {/* .... Submit ..... */}
+              <Button text="Submit" />
             </div>
           </div>
         </div>
