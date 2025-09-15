@@ -1,7 +1,10 @@
-const AboutPage = () => {
-  return (
-    <>AboutPage</>
-  )
-}
+import React from "react";
+import AboutSlider from "../../components/AboutSlider";
 
-export default AboutPage
+export default function AboutPage() {
+  return (
+    <div>
+      <AboutSlider />
+    </div>
+  );
+}
